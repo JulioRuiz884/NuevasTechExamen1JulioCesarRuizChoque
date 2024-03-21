@@ -1,0 +1,16 @@
+# VISUAL ESTUDIO 2022 files basura
+.vs/
+**/obj/
+**/bin/
+*.suo
+*.user
+*.sin.cache
+
+#MAUI FILES BASURA
+*.vsidx
+*.assets.cache
+*.AssemblyReferences.cache
+*.nuget.dgspec.json
+project.assets.json
+project.nuget.cache
+*.GeneratedMSBuildEditorConfig.editorconfig
