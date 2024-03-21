@@ -25,7 +25,7 @@ namespace Evaluacion.Almacen.Endpoints
         [Function("EliminarProveedor")]
         [OpenApiOperation("EliminarProveedor", "Eliminar Proveedor", Description = "Elimina un proveedor por su clave de partición y fila.")]
         [OpenApiParameter("id", In = ParameterLocation.Query, Required = true, Type = typeof(string), Description = "ID del proveedor a eliminar.")]
-        public async Task<HttpResponseData> EliminarProveedor([HttpTrigger(AuthorizationLevel.Function, "delete")] HttpRequestData req)
+        public async Task<HttpResponseData> EliminarProveedor([HttpTrigger(AuthorizationLevel.Anonymous, "delete")] HttpRequestData req)
         {
             HttpResponseData respuesta;
             try
@@ -58,7 +58,7 @@ namespace Evaluacion.Almacen.Endpoints
         [OpenApiRequestBody("application/json", typeof(Proveedor), Description = "Proveedor modelo")]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json",
                                  bodyType: typeof(Proveedor), Description = "Mostrara el proveedor creado")]
-        public async Task<HttpResponseData> InsertarProveedor([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequestData req)
+        public async Task<HttpResponseData> InsertarProveedor([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequestData req)
         {
             HttpResponseData respuesta;
             try
@@ -87,7 +87,7 @@ namespace Evaluacion.Almacen.Endpoints
         [Function("ModificarProveedor")]
         [OpenApiOperation("ModificarProveedor", "Modificar Proveedor", Description = "Modifica un proveedor existente.")]
         [OpenApiRequestBody("application/json", typeof(Proveedor), Description = "Datos del proveedor a modificar.")]
-        public async Task<HttpResponseData> ModificarProveedor([HttpTrigger(AuthorizationLevel.Function, "put")] HttpRequestData req)
+        public async Task<HttpResponseData> ModificarProveedor([HttpTrigger(AuthorizationLevel.Anonymous, "put")] HttpRequestData req)
         {
             HttpResponseData respuesta;
             try
@@ -123,7 +123,7 @@ namespace Evaluacion.Almacen.Endpoints
         [OpenApiOperation("ListarProveedorById", "Listar Proveedor por ID", Description = "Obtiene un proveedor por su ID.")]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json", bodyType: typeof(Proveedor), Description = "Muestra el proveedor encontrado.")]
         [OpenApiParameter("id", In = ParameterLocation.Path, Required = true, Type = typeof(string), Description = "ID del proveedor a buscar.")]
-        public async Task<HttpResponseData> ListarProveedorById([HttpTrigger(AuthorizationLevel.Function, "get", Route = "ListarProveedorById/{id}")] HttpRequestData req, string id)
+        public async Task<HttpResponseData> ListarProveedorById([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "ListarProveedorById/{id}")] HttpRequestData req, string id)
         {
             HttpResponseData respuesta;
             try
@@ -152,7 +152,7 @@ namespace Evaluacion.Almacen.Endpoints
         [OpenApiOperation("Listarespec", "ListarProveedor", Description = "Sirve para listar todas los proveedores")]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json",
                                  bodyType: typeof(List<Proveedor>), Description = "Mostrara una lista de proveedores")]
-        public async Task<HttpResponseData> ListarProveedor([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequestData req)
+        public async Task<HttpResponseData> ListarProveedor([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData req)
         {
             HttpResponseData respuesta;
             try
