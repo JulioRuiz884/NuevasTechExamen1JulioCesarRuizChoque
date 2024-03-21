@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIMicroservices", "APIMicr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{BDB06A97-1EED-49E0-822E-899097643295}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluacion.Shared", "Evaluacion.Shared\Evaluacion.Shared.csproj", "{E75C0EDF-F103-4156-8976-614F043E5CCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evaluacion.Shared", "Evaluacion.Shared\Evaluacion.Shared.csproj", "{E75C0EDF-F103-4156-8976-614F043E5CCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluacion.Almacen", "Evaluacion.Almacen\Evaluacion.Almacen.csproj", "{B7C960CF-BDB5-4C05-896A-85A934E6B8E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evaluacion.Almacen", "Evaluacion.Almacen\Evaluacion.Almacen.csproj", "{B7C960CF-BDB5-4C05-896A-85A934E6B8E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
